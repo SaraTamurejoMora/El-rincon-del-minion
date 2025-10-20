@@ -1,0 +1,48 @@
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between; /* espacio entre logo y nav */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* NAV con flex horizontal */
+header nav ul {
+  display: flex; /* hace que los links estén en fila */
+  gap: 20px;     /* espacio entre cada link */
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #e0e0e0;
+}
+
+/* RESPONSIVE para móviles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav {
+    margin-top: 10px;
+    flex-direction: column; /* links uno debajo del otro en móvil */
+    gap: 10px;
+  }
+}
