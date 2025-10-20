@@ -33,9 +33,9 @@ function PreviewBlogs() {
 
   return (
  
-      <div>
+      <div id="containerMasVisto">
         {blogs.map((blog) => (
-          <div key={blog.id} style={{ border: "1px solid #ccc", padding: "10px", margin: "10px 0" }}>
+          <div id="blog" key={blog.id} style={{ border: "1px solid #ccc", padding: "10px", margin: "10px 0" }}>
             <img src={blog.image} alt={blog.title} style={{ width: "200px", height: "auto" }} />
             <h2>{blog.title}</h2>
             <p>{blog.description}</p>

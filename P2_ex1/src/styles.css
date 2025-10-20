@@ -1,5 +1,5 @@
 header {
-  background-color: #4CAF50;
+  background-color: rgb(19, 81, 125);
   color: white;
   padding: 15px 20px;
   display: flex;
@@ -17,6 +17,14 @@ header h1 {
 }
 
 /* NAV con flex horizontal */
+
+nav {
+display: flex;
+width: 700px;
+
+}
+
+
 header nav ul {
   display: flex; /* hace que los links estén en fila */
   gap: 20px;     /* espacio entre cada link */
@@ -45,4 +53,26 @@ header nav a:hover {
     flex-direction: column; /* links uno debajo del otro en móvil */
     gap: 10px;
   }
+}
+
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+}
+
+#containerBienvenida{
+    background-color: rgb(177, 217, 236);
+}
+
+#containerMasVisto{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#blog{
+
+    width: 300px
+
 }

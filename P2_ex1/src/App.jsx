@@ -11,15 +11,15 @@ import './styles.css'
 function App() {
 
   return (
-    <>
-      <div>
+  
+      <div id="contenedorGeneral">
         <Header/>
         <Home/>    
         <Footer/>
 
       </div>
 
-    </>
+
   )
 }
 
