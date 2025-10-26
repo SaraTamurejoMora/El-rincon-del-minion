@@ -7,7 +7,7 @@ function Footer() {
     <>
       <footer>
         <div>
-          <a href="https://www.instagram.com" target="_blank"> 
+          <a href="https://www.instagram.com/el_rincon_del_minion/" target="_blank"> 
               <Instagram></Instagram>
           </a>
           <a href="https://www.twitter.com" target="_blank">
