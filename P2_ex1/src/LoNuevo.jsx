@@ -33,18 +33,33 @@ function LoNuevo() {
     ];
 
     return (
-        <div>
-            {nuevos.map((nuevo) => (
-                <div key={nuevo.id} style={{ border: "1px solid #ccc", padding: "10px", margin: "10px 0" }}>
-                    <img src="./public/img/nuevo.png" alt="" />
-                    <h2>{nuevo.title}</h2>
-                </div>
-                
-            ))}
-            <img src="./public/img/1f82bdcf2aa385767c55081ac4116f82.jpg" alt="" />
-        </div>
+        <div id="loNuevo">
+            <div className="loNuevo-header">
+                <h1 className="section-title">Lo más nuevo</h1>
+                <div className="fancy-dash fancy-dash--capsules"></div>
 
-    )
+            </div>
+
+            <div className="loNuevo-contenido">
+                <div className="loNuevo-lista">
+                    {nuevos.map((nuevo) => (
+                        <div key={nuevo.id} className="nuevo-item">
+                            <span className="badge-new">NEW</span>
+                            <p>{nuevo.title}</p>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="imagen-graciosa">
+                    <img
+                        src="/img/alien.png"
+                        alt="Imagen graciosa"
+                    />
+
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default LoNuevo

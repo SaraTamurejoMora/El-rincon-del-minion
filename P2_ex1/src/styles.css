@@ -1,77 +1,446 @@
-header {
-  background-color: rgb(19, 81, 125);
-  color: white;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between; /* espacio entre logo y nav */
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+/* --------------------- FUENTES --------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lacquer&display=swap');
 
-header h1 {
+
+* {
+  font-family: "Sour Gummy", "Comic Sans MS", "Quicksand", sans-serif;
+  font-size: 1.05rem;
+  box-sizing: border-box;
   margin: 0;
-  font-size: 1.8rem;
+  padding: 0;
 }
 
-/* NAV con flex horizontal */
+/* --------------------- HEADER --------------------- */
 
-nav {
-display: flex;
-width: 700px;
-
+/*La cabecera*/
+header {
+  background-color: #114f73;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 60px;
+  color: #fff8e7;
+  border-bottom: 2px solid #0f4e6a;
+  position: relative;
+  z-index: 10;
+}
+ /* Logo */
+#logo {
+  height: 70px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
-
-header nav ul {
-  display: flex; /* hace que los links estén en fila */
-  gap: 20px;     /* espacio entre cada link */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 45px;
 }
 
-header nav a {
-  color: white;
+nav a {
+  color: #fff8e7;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-weight: 600;
+  font-size: 1.30rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
-header nav a:hover {
-  color: #e0e0e0;
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
 }
 
-/* RESPONSIVE para móviles */
-@media (max-width: 768px) {
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  nav ul { gap: 25px; }
+  nav a { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
   header {
     flex-direction: column;
+    padding: 15px 20px;
     text-align: center;
   }
+  #logo { height: 55px; }
+  nav ul { flex-wrap: wrap; justify-content: center; gap: 14px; }
+}
 
-  header nav {
-    margin-top: 10px;
-    flex-direction: column; /* links uno debajo del otro en móvil */
-    gap: 10px;
+/* --------------------- FOOTER --------------------- */
+footer {
+  background-color: #114f73;
+  border-radius: 0 0 25px 25px;
+  padding: 25px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #ffffff0d;
+  color: #fff;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+footer a:hover {
+  background-color: #ffffff22;
+  transform: translateY(-3px);
+}
+
+footer svg {
+  width: 26px;
+  height: 26px;
+  stroke-width: 2.5;
+}
+
+/* --------------------- BIENVENIDA --------------------- */
+#containerBienvenida {
+  background-color: #a9d3e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  padding: 80px 90px;
+  border-top: none;
+  border-bottom: none;
+}
+
+#containerBienvenida img {
+  width: 370px;
+  height: 370px;
+  background-color: #dbe4f5;
+  border-radius: 200px;
+  object-fit: cover;
+}
+
+#containerBienvenida h1 {
+  font-size: 4rem;
+  color: #1e4e6a;
+  line-height: 1.3;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+#containerBienvenida button {
+  background-color: #3a8aa5;
+  color: #ffffff;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 #2f7189;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+#containerBienvenida button:hover {
+  background-color: #327b93;
+  transform: translateY(-2px);
+}
+
+/* --------------------- TÍTULOS SECCIÓN --------------------- */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2b546b;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 340px;
+  height: 4px;
+  background: #98c7e0;
+  border-radius: 999px;
+  margin: 14px auto 0;
+}
+
+/* --------------------- LO MÁS VISTO --------------------- */
+#containerMasVisto {
+  background-color: #f6ead8;
+  padding: 80px 50px 40px;
+  color: #2b546b;
+  text-align: center;
+}
+
+.blogs-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 55px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#blog {
+  width: 320px;
+  border-radius: 24px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #2b546b;
+}
+
+#blog:hover {
+  transform: translateY(-8px) rotate(var(--rot, 0deg));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagen {
+  width: 100%;
+  height: 200px;
+  border-radius: 18px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#blog h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#blog p {
+  font-size: 1.1rem;
+  margin: 4px 0;
+  text-align: justify;
+}
+
+.mini-desc {
+  opacity: 0.9;
+}
+
+
+.blog1 {
+  --rot: -5deg;
+  background-color: #ffffff;
+  transform: rotate(var(--rot));
+}
+.blog1 .imagen {
+  background-color: #d6e6ef;
+}
+
+.blog2 {
+  --rot: 0deg;
+  background-color: #c5dde7;
+  transform: rotate(var(--rot));
+}
+.blog2 .imagen {
+  background-color: #3a8aa5;
+  color: #fff;
+}
+
+.blog3 {
+  --rot: 6deg;
+  background-color: #63a5c4;
+  color: #0f3145;
+  transform: rotate(var(--rot));
+}
+.blog3 .imagen {
+  background-color: #ffffff;
+}
+
+
+@media (max-width: 800px) {
+  .blogs-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  #blog {
+    width: 90%;
+    max-width: 360px;
+    transform: rotate(0deg);
+  }
+
+  #blog:hover {
+    transform: translateY(-5px);
   }
 }
 
-#logo{
-    display: flex;
-    flex-direction: row;
-    height: 100px;
+/* --------------------- LO NUEVO --------------------- */
+#loNuevo {
+  background-color: #f6ead8;
+  padding: 70px 50px;
+  color: #2b546b;
+  text-align: center;
 }
 
-#containerBienvenida{
-    background-color: rgb(177, 217, 236);
+.loNuevo-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-#containerMasVisto{
-    display: flex;
-    justify-content: space-evenly;
+.loNuevo-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
 }
 
-#blog{
+.nuevo-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  padding: 10px 12px;
+  border-radius: 14px;
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
 
-    width: 300px
 
+.nuevo-item:hover {
+  transform: translateY(-4px);
+  background-color: rgba(99, 165, 196, .08);
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+}
+
+.nuevo-item::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: -2px;
+  height: 3px;
+  background: linear-gradient(90deg, #63a5c4, #a9d3e1, #63a5c4);
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s ease;
+}
+
+.nuevo-item:hover::after { transform: scaleX(1); }
+
+.nuevo-item p {
+  font-size: 1.3rem;
+}
+
+.badge-new {
+  background-color: #63a5c4;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 16px;
+  min-width: 60px;
+  text-align: center;
+  font-family: "Lacquer", system-ui, sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: .3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.06);
+  transform: rotate(-1deg);
+  transition: transform .30s ease, filter .30s ease;
+}
+
+.nuevo-item:hover .badge-new {
+  transform: rotate(-3deg) scale(1.08);
+  filter: drop-shadow(0 2px 4px rgba(99,165,196,.5));
+}
+
+.imagen-graciosa {
+  width: 260px;
+  height: 210px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #2b546b;
+  flex-shrink: 0;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+#loNuevo .imagen-graciosa:hover {
+  transform: rotate(-1deg) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nuevo-item,
+  .nuevo-item::after,
+  .badge-new,
+  #loNuevo .imagen-graciosa {
+    transition: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .loNuevo-contenido { flex-direction: column; align-items: center; }
+  .imagen-graciosa { width: 100%; max-width: 300px; margin-top: 18px; }
+}
+
+/* --------------------- GALERÍA --------------------- */
+.galeria-section {
+  background: #a9d3e1;
+  padding: 50px 20px 60px;
+  color: #1c4a64;
+  border-radius: 0;
+}
+
+.galeria-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.galeria-heading h2 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #1c4a64;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+
+.galeria-heading h2::after {
+  content: "";
+  display: block;
+  width: 340px;
+  height: 4px;
+  background: #6ba1bd;
+  border-radius: 999px;
+  margin: 14px auto 0;
+}
+
+.slide-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,.1);
 }

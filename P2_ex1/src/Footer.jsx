@@ -13,9 +13,6 @@ function Footer() {
           <a href="https://www.twitter.com" target="_blank">
               <Twitter></Twitter>
           </a>
-          <a href="https://www.pinterest.com" target="_blank">
-          
-          </a>
           <a href="https://www.facebook.com" target="_blank">
             <Facebook></Facebook>
           </a>

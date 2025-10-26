@@ -5,7 +5,7 @@ function Header() {
   return (
 
       <header>
-          <img id="logo" src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da841d0d551c9379db69147de4d6" alt="" />
+          <img id="logo" src="img/logito.png" alt="" />
           <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
