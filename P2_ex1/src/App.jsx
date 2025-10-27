@@ -6,6 +6,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
 import './styles.css'
+import Contacto from './Contacto'
 
 
 function App() {
@@ -14,12 +15,10 @@ function App() {
   
       <div id="contenedorGeneral">
         <Header/>
-        <Home/>    
+        {/*<Contacto/>*/}
+        <Home/>
         <Footer/>
-
       </div>
-
-
   )
 }
 
