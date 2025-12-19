@@ -445,3 +445,172 @@ footer svg {
   box-shadow: 0 4px 8px rgba(0,0,0,.1);
 }
 
+
+.contenedorAudio{
+  position: relative;
+}
+
+/*Audio*/
+audio{
+    position: absolute;
+    right: 118%;
+}
+
+/* ====== GALERÍA IMÁGENES ====== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  padding: 24px;
+  background: #faf7f2; /* tono papel */
+}
+
+/* Tarjeta para que todas tengan el mismo marco */
+.galeria-item {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.galeria-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+
+.galeria-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* todas “cuadradas” visualmente */
+  object-fit: cover;     /* recorta sin deformar */
+  display: block;
+}
+
+/*Para responsive*/
+@media (max-width: 480px) {
+  .galeria, .videos {
+    padding: 16px;
+    gap: 14px;
+  }
+}
+
+/*Videos*/
+
+/* Grid responsive tipo galería */
+.reels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  padding: 24px;
+  background: #0b0b0b; /* look más “reels” */
+}
+
+/* Tarjeta */
+.reel-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.reel-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Vídeo vertical*/
+.reel-video {
+  width: 100%;
+  aspect-ratio: 9 / 16;  /*Porque es una storie de insta*/
+  display: block;
+  object-fit: cover;      
+  background: #000;
+}
+
+/* En móvil, que no sea demasiado pequeño */
+@media (max-width: 480px) {
+  .reels {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 16px;
+    gap: 14px;
+  }
+}
+
+/*Para responsive*/
+
+@media (max-width: 480px) {
+  .reels {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===================== MANUALIDADES ===================== */
+
+.manualidades-pagina {
+  background: #f6ead8;
+  padding: 60px 30px;
+  color: #2b546b;
+}
+
+/* Bloques de Imágenes / Vídeos */
+.manualidades-seccion {
+  max-width: 1200px;
+  margin: 0 auto 55px;
+  padding: 28px 26px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+  border: 1px solid rgba(17, 79, 115, 0.08);
+}
+
+/* Títulos */
+.manualidades-titulo {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1c4a64;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.manualidades-titulo::after {
+  content: "";
+  display: block;
+  width: min(340px, 80%);
+  height: 4px;
+  background: #98c7e0;
+  border-radius: 999px;
+  margin: 14px auto 0;
+}
+
+
+.manualidades-seccion .galeria {
+  background: transparent;
+  padding: 0;
+}
+
+.manualidades-seccion .reels {
+  background: transparent;
+  padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .manualidades-pagina {
+    padding: 35px 14px;
+  }
+
+  .manualidades-seccion {
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  .manualidades-titulo {
+    font-size: 1.7rem;
+  }
+}

@@ -1,6 +1,7 @@
 import LoNuevo from "./LoNuevo"
 import PreviewBlogs from "./PreviewBlogs"
 import Galeria from "./Galeria"
+import AudioPlayer from "./AudioPlayer"
 
 function Home() {
 
@@ -12,6 +13,10 @@ function Home() {
         <div>
           <h1>Bienvenid@s a mis manualidades</h1>
           <button>Descubre mis creaciones</button>
+          <div className="contenedorAudio">
+            <AudioPlayer/>
+          </div>
+          
         </div>
 
       </div>
