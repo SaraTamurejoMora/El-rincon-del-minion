@@ -3,9 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-// Importar módulos desde swiper/modules
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, A11y } from "swiper/modules";
 
 const imgSlider = [
   { id: 1, url: "img/galeria/ranitas.jpg", alt: "Velas Decorativas Caseras" },
@@ -22,17 +20,19 @@ const imgSlider = [
 
 function Galeria() {
   return (
-    <section className="galeria-section">
+    <section
+      className="galeria-section"
+      aria-label="Galería de manualidades"
+    >
       <div className="galeria-heading">
         <span className="fancy-dash fancy-dash--on-blue" />
-        <h1 className="section-title">Galería</h1>
+        <h2 className="section-title">Galería</h2>
         <span className="fancy-dash fancy-dash--on-blue" />
       </div>
 
-
       <Swiper
         className="galeria-swiper"
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, A11y]}
         spaceBetween={30}
         slidesPerView={1}
         navigation
@@ -41,6 +41,13 @@ function Galeria() {
         breakpoints={{
           640: { slidesPerView: 2, spaceBetween: 24 },
           1024: { slidesPerView: 3, spaceBetween: 30 }
+        }}
+        a11y={{
+          prevSlideMessage: "Anterior",
+          nextSlideMessage: "Siguiente",
+          firstSlideMessage: "Primera diapositiva",
+          lastSlideMessage: "Última diapositiva",
+          slideLabelMessage: "{{index}} de {{slidesLength}}"
         }}
       >
         {imgSlider.map((img) => (

@@ -1,7 +1,4 @@
-
-
 function LoNuevo() {
-
     const nuevos = [
         {
             id: 4,
@@ -33,33 +30,32 @@ function LoNuevo() {
     ];
 
     return (
-        <div id="loNuevo">
-            <div className="loNuevo-header">
-                <h1 className="section-title">Lo más nuevo</h1>
-                <div className="fancy-dash fancy-dash--capsules"></div>
-
-            </div>
+        <section id="loNuevo" aria-labelledby="loNuevo-title">
+            <header className="loNuevo-header">
+                <h2 id="loNuevo-title" className="section-title">Lo más nuevo</h2>
+                <span className="fancy-dash fancy-dash--capsules" aria-hidden="true"></span>
+            </header>
 
             <div className="loNuevo-contenido">
-                <div className="loNuevo-lista">
+                <ul className="loNuevo-lista">
                     {nuevos.map((nuevo) => (
-                        <div key={nuevo.id} className="nuevo-item">
-                            <span className="badge-new">NEW</span>
+                        <li key={nuevo.id} className="nuevo-item">
+                            <span className="badge-new" aria-label="Nuevo">NEW</span>
                             <p>{nuevo.title}</p>
-                        </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
 
                 <div className="imagen-graciosa">
                     <img
                         src="/img/alien.png"
-                        alt="Imagen graciosa"
+                        alt=""
+                        aria-hidden="true"
                     />
-
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
-export default LoNuevo
+export default LoNuevo;

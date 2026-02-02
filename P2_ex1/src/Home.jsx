@@ -4,40 +4,39 @@ import Galeria from "./Galeria"
 import AudioPlayer from "./AudioPlayer"
 
 function Home() {
-
-
   return (
     <>
-      <div id="containerBienvenida">
-        <img src="img/saludo.png" alt="" />
+      {/* Sección de bienvenida */}
+      <section id="containerBienvenida" aria-label="Bienvenida">
+        <img
+          src="img/saludo.png"
+          alt="Saludo de bienvenida con manualidades"
+        />
         <div>
           <h1>Bienvenid@s a mis manualidades</h1>
-          <button>Descubre mis creaciones</button>
+          <button type="button" aria-label="Descubre mis creaciones">
+            Descubre mis creaciones
+          </button>
           <div className="contenedorAudio">
-            <AudioPlayer/>
+            <AudioPlayer />
           </div>
-          
         </div>
+      </section>
 
-      </div>
-
-      <div>
-
-      </div>
-
-      <div>
+      {/* Sección de blogs destacados */}
+      <section aria-label="Blogs destacados">
         <PreviewBlogs />
-      </div>
+      </section>
 
-      <div>
+      {/* Sección Lo Nuevo */}
+      <section aria-label="Lo nuevo">
         <LoNuevo />
-      </div>
+      </section>
 
-      <div>
+      {/* Sección Galería */}
+      <section aria-label="Galería de manualidades">
         <Galeria />
-      </div>
-
-
+      </section>
     </>
   )
 }

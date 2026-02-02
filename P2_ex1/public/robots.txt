@@ -1,0 +1,8 @@
+# robots.txt para la web de manualidades
+
+User-agent: *
+Disallow: /admin
+Disallow: /privado
+Allow: /
+
+Sitemap: https://www.elrincondelminion.com/sitemap.xml

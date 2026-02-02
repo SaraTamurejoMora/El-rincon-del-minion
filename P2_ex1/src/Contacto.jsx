@@ -1,30 +1,47 @@
-
+import { useRef, useEffect } from "react";
 
 function Contacto() {
+  const correoRef = useRef(null);
 
+  useEffect(() => {
+    correoRef.current.focus(); // Focus automático
+  }, []);
 
   return (
-    <>
-      <div className="contenedor-general">
-        <div className="contenedor-form">
-          <h1>Formulario de contacto</h1>
-          <form action="">
-            <label for="correo" >Correo electrónico</label>
-            <input type="text" id="correo" name="correo" placeholder="correo@ejemplo.com" required />
+    <main className="contenedor-general" role="main">
+      <section className="contenedor-form" aria-label="Formulario de contacto">
+        <h1>Formulario de contacto</h1>
 
-            <label for="sugerencia">Sugerencia</label>
-            <input type="sugerencia" id="sugerencia" name="sugerencia" placeholder="Escribe una super sugerencia :)" required></input>
-
-            <button type="submit" >Enviar</button>
-          </form>
+        <form>
           <div>
-            {/*Añadir foto graciosa */}
+            <label htmlFor="correo">Correo electrónico</label>
+            <input
+              type="email"
+              id="correo"
+              name="correo"
+              placeholder="correo@ejemplo.com"
+              required
+              ref={correoRef}
+            />
           </div>
-        </div>
-      </div>
 
-    </>
-  )
+          <div>
+            <label htmlFor="sugerencia">Sugerencia</label>
+            <textarea
+              id="sugerencia"
+              name="sugerencia"
+              placeholder="Escribe una super sugerencia :)"
+              required
+            />
+          </div>
+
+          <button type="submit" aria-label="Enviar formulario de contacto">
+            Enviar
+          </button>
+        </form>
+      </section>
+    </main>
+  );
 }
 
-export default Contacto
+export default Contacto;

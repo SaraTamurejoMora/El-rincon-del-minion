@@ -614,3 +614,182 @@ audio{
     font-size: 1.7rem;
   }
 }
+
+
+/* --------------------- CONTACTO --------------------- */
+
+.contenedor-general {
+  background-color: #63a5c4;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 45px 50px;
+  border-radius: 25px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+  color: #2b546b;
+}
+
+.contenedor-form h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+  color: #1e4e6a;
+}
+
+.contenedor-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contenedor-form label {
+  font-weight: 600;
+  color: #2b546b;
+}
+
+.contenedor-form input {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 2px solid #cfe3ec;
+  font-size: 1rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contenedor-form input::placeholder {
+  color: #9ab8c6;
+}
+
+.contenedor-form input:focus {
+  outline: none;
+  border-color: #3a8aa5;
+  box-shadow: 0 0 0 3px #3a8aa533;
+}
+
+.contenedor-form button {
+  margin-top: 15px;
+  background-color: #3a8aa5;
+  color: #ffffff;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 14px;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: inset 0 -3px 0 #2f7189;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.contenedor-form button:hover {
+  background-color: #327b93;
+  transform: translateY(-2px);
+}
+
+.contenedor-form button:active {
+  transform: translateY(0);
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+
+@media (max-width: 600px) {
+  .contenedor-form {
+    padding: 35px 25px;
+  }
+
+  .contenedor-form h1 {
+    font-size: 2rem;
+  }
+}
+
+
+
+/* --------------------- SOBRE MÍ --------------------- */
+
+.sobre-mi {
+  background-color: #f6ead8; 
+  padding: 90px 50px;
+  color: #2b546b;
+}
+
+.sobre-mi-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+/* Imagen del perfil */
+.sobre-mi-imagen img {
+  width: 320px;
+  height: 320px;
+  border-radius: 16px;
+  object-fit: cover;
+  background-color: #dbe4f5;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto */
+.sobre-mi-texto {
+  flex: 1;
+}
+
+.sobre-mi-texto .section-title {
+  font-size: 2.2rem;
+  color: #2b546b;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.sobre-mi-texto .section-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background: #98c7e0;
+  border-radius: 999px;
+  margin-top: 10px;
+}
+
+/* Bloque azul */
+.sobre-mi-bloque {
+  background-color: #a9d3e1; 
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  text-align: justify;
+}
+
+.sobre-mi-bloque p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  font-size: 1.15rem;
+}
+
+.sobre-mi-bloque p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 900px) {
+  .sobre-mi-contenido {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-mi-imagen img {
+    width: 220px;
+    height: 220px;
+    margin-bottom: 30px;
+  }
+
+  .sobre-mi-bloque {
+    text-align: justify;
+  }
+}

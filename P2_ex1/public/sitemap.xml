@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://www.elrincondelminion.com/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Sobre mí -->
+  <url>
+    <loc>https://www.elrincondelminion.com/sobremi</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Contacto -->
+  <url>
+    <loc>https://www.elrincondelminion.com/contacto</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Blogs -->
+  <url>
+    <loc>https://www.elrincondelminion.com/blogs</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Manualidades -->
+  <url>
+    <loc>https://www.elrincondelminion.com/manualidades</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+</urlset>
