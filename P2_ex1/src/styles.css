@@ -299,6 +299,10 @@ footer svg {
   text-align: center;
 }
 
+#loNuevo-title{
+  color: white;
+}
+
 .loNuevo-contenido {
   display: flex;
   justify-content: center;
@@ -707,9 +711,9 @@ audio{
   }
 }
 
+/*
 
-
-/* --------------------- SOBRE MÍ --------------------- */
+ --------------------- SOBRE MÍ --------------------- 
 
 .sobre-mi {
   background-color: #f6ead8; 
@@ -725,7 +729,7 @@ audio{
   gap: 60px;
 }
 
-/* Imagen del perfil */
+ Imagen del perfil 
 .sobre-mi-imagen img {
   width: 320px;
   height: 320px;
@@ -733,9 +737,10 @@ audio{
   object-fit: cover;
   background-color: #dbe4f5;
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  margin-top: 160px;
 }
 
-/* Texto */
+ Texto 
 .sobre-mi-texto {
   flex: 1;
 }
@@ -757,7 +762,7 @@ audio{
   margin-top: 10px;
 }
 
-/* Bloque azul */
+ Bloque azul 
 .sobre-mi-bloque {
   background-color: #a9d3e1; 
   padding: 30px 35px;
@@ -776,7 +781,7 @@ audio{
   margin-bottom: 0;
 }
 
-/* --------------------- RESPONSIVE --------------------- */
+ --------------------- RESPONSIVE --------------------- 
 @media (max-width: 900px) {
   .sobre-mi-contenido {
     flex-direction: column;
@@ -793,3 +798,4 @@ audio{
     text-align: justify;
   }
 }
+*/

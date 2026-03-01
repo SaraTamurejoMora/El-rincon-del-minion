@@ -1,3 +1,5 @@
+import "../src/assets/scss/sobreMi.scss";
+
 function SobreMi() {
   return (
     <section className="sobre-mi">
@@ -5,7 +7,7 @@ function SobreMi() {
         {/* Imagen del perfil */}
         <div className="sobre-mi-imagen">
           <img
-            src="/img/sobremi.png"
+            src="/img/sobreMi/pfp.jpg"
             alt="Perfil de la creadora"
           />
         </div>
